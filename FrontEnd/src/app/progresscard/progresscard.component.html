@@ -1,0 +1,45 @@
+<div>
+    <div class="progresscard">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>CLASS</th>
+                    <th>SUBJECT</th>
+                    <th>Mark</th>
+                    <th>%</th>
+                    <th>grade</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let st of student">
+                <tr>
+                    <td>{{st.name}}</td>
+                    <td>{{st.class}}</td>
+                    <td>ENGLISH</td>
+                    <td>{{st.engmark}}</td>
+                    <td>{{(st.engmark/st.total)*100}}</td>
+                    <td *ngIf="(st.engmark/st.total)*100 >=90">A</td>
+                    <td *ngIf="(st.engmark/st.total)*100 <90 &&  (st.engmark/st.total)*100 >=80">B</td>
+                    <td *ngIf="(st.engmark/st.total)*100 <80 &&  (st.engmark/st.total)*100 >=70">C</td>
+                    <td *ngIf="(st.engmark/st.total)*100 <70 &&  (st.engmark/st.total)*100 >=60">D</td>
+                    <td *ngIf="(st.engmark/st.total)*100 <60 &&  (st.engmark/st.total)*100 >=50">E</td>
+                    <td *ngIf="(st.engmark/st.total)*100 <50">Failed</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>MATHS</td>
+                    <td>{{st.mathmark}}</td>
+                    <td>{{(st.mathmark/st.total)*100}}</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 >=90">A</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 <90 &&  (st.mathmark/st.total)*100 >=80">B</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 <80 &&  (st.mathmark/st.total)*100 >=70">C</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 <70 &&  (st.mathmark/st.total)*100 >=60">D</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 <60 &&  (st.mathmark/st.total)*100 >=50">E</td>
+                    <td *ngIf="(st.mathmark/st.total)*100 <50">Failed</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

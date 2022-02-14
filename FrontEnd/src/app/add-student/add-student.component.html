@@ -1,0 +1,39 @@
+<br>
+<br>
+
+<div class="addstudent">
+    <form action="" >
+        <table class="table table-borderless">
+            <tr scope="row">
+                <td><label for="">Name  :</label></td>
+                <td><input type="text" class="form-control" [(ngModel)]="student.name" name="name" id="name"></td>
+            </tr>
+            <tr scope="row">
+                <td><label for="">class  :</label></td>
+                <td><input type="text" class="form-control" [(ngModel)]="student.class" name="class" id="class"></td>
+                <td><label for="">Subject  :</label>
+                    <select name="subject" id="subject" style="width: 160px;">
+                        <option value="English">English</option>
+                        <option value="Maths">Maths</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Marks :</label></td>
+                <td><label>English</label></td>
+                <td><label>maths</label></td>
+                <td><label>total</label></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input  type="text" class="form-control"   [(ngModel)]="student.engmark" name="engmark" id="engmark"></td>
+                <td><input type="text" class="form-control"  [(ngModel)]="student.mathmark" name="mathmark" id="mathmark"></td>
+                <td><input type="text" class="form-control"  [(ngModel)]="student.total" name="total" id="total"></td>
+            </tr>
+            <tr><td></td>
+                <td></td>
+                <td><button class="btn btn-primary" (click)="addstudent()" style="width: 100px;height: 50px;">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</div>

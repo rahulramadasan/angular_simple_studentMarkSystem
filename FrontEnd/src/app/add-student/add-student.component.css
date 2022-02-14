@@ -1,0 +1,17 @@
+.addstudent{
+    margin: auto;
+    width: 60%;
+    height: 300px;
+    text-align: center;
+}
+
+*{
+    margin: auto;
+    padding: 0;
+}
+
+select{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+}
